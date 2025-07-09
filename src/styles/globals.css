@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: var(--font-inter);
+  --font-titillium-web: var(--font-titillium-web);
+  --color-primary: #fd854b;
+}
+
+@utility shadow-primary {
+  box-shadow: 12px 7px 16px 3px rgba(253, 133, 75, 0.56);
+  -webkit-box-shadow: 12px 7px 16px 3px rgba(253, 133, 75, 0.56);
+  -moz-box-shadow: 12px 7px 16px 3px rgba(253, 133, 75, 0.56);
+}
+
+body {
+  font-family: var(--font-inter);
+  @apply max-w-10/12 mx-auto bg-zinc-100;
+}
