@@ -1,22 +1,19 @@
-import { ReactNode } from "react";
-
-interface BentoTileProps {
-  className?: string;
-  children?: ReactNode;
-  title?: string;
-  description?: string;
-}
+import { DiscoverItem } from "@/types";
 
 export default function BentoTile({
   className,
   children,
   title,
   description,
-}: BentoTileProps) {
+  titleStyles,
+  paragraphStyles,
+  Icon,
+}: DiscoverItem) {
   return (
-    <div className={`rounded-md p-10 ${className}`}>
-      <h2>{title}</h2>
-      <p>{description}</p>
+    <div className={`flex flex-col gap-2 rounded-2xl shadow-2xl ${className}`}>
+      {Icon && <Icon />}
+      <h2 className={`font-extrabold text-3xl ${titleStyles}`}>{title}</h2>
+      <p className={`${paragraphStyles}`}>{description}</p>
       {children}
     </div>
   );
