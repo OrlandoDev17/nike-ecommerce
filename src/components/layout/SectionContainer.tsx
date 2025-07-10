@@ -1,4 +1,7 @@
+"use client";
+
 import { ReactNode } from "react";
+import { easeInOut, motion } from "motion/react";
 
 interface SectionContainerProps {
   children?: ReactNode;
@@ -12,13 +15,17 @@ export default function SectionContainer({
   className,
 }: SectionContainerProps) {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: easeInOut }}
+      viewport={{ once: true }}
       className={`flex flex-col gap-12 items-center max-w-9/12 mx-auto ${className}`}
     >
       <h2 className="text-4xl font-bold font-titillium-web tracking-wide">
         {title}
       </h2>
       {children}
-    </section>
+    </motion.section>
   );
 }

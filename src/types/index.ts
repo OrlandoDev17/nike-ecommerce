@@ -31,6 +31,7 @@ export interface Product {
 export interface DiscoverItem {
   id?: number;
   className?: string;
+  bentoPositions?: string;
   title?: string;
   description?: string;
   content?: React.ReactNode;
@@ -42,6 +43,7 @@ export interface DiscoverItem {
 
 export interface AirMaxStory {
   id: number;
-  title: string;
+  title: number | string;
   description: string;
+  prefix?: string;
 }

@@ -10,7 +10,7 @@ export default function ProductCard({
   image,
 }: Product) {
   return (
-    <article className="flex flex-col gap-4 rounded-xl shadow-xl p-4 group hover:scale-102 transition-all">
+    <article className="flex flex-col gap-4 rounded-xl shadow-xl p-4 max-h-[545px] group hover:scale-102 transition-all">
       <header className="bg-gray-200 px-4 rounded-xl h-[250px]">
         <img className="w-full h-full object-contain" src={image} alt={name} />
       </header>
