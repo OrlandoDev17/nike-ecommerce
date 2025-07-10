@@ -4,6 +4,7 @@
   --font-inter: var(--font-inter);
   --font-titillium-web: var(--font-titillium-web);
   --color-primary: #fd854b;
+  --color-secondary: #222;
 }
 
 @utility shadow-primary {
