@@ -1,4 +1,4 @@
-import { ComponentType, SVGProps } from "react";
+import { ComponentType, ReactNode, SVGProps } from "react";
 
 import { MouseEvent } from "react";
 
@@ -26,4 +26,16 @@ export interface Product {
   category?: string;
   featured?: boolean;
   image?: string;
+}
+
+export interface DiscoverItem {
+  id?: number;
+  className?: string;
+  title?: string;
+  description?: string;
+  content?: React.ReactNode;
+  titleStyles?: string;
+  paragraphStyles?: string;
+  Icon?: ComponentType;
+  children?: ReactNode;
 }
