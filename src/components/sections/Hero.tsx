@@ -16,7 +16,7 @@ export default function Hero() {
           duradero.
         </p>
         <div className="flex items-center gap-12 mt-8">
-          <button className="px-7 py-4 bg-primary text-white rounded-xl shadow-primary">
+          <button className="px-7 py-4 bg-primary text-white rounded-xl shadow-primary hover:-translate-y-1 hover:scale-110 transition-all">
             Agregar al carrito
           </button>
           <span className="text-4xl font-titillium-web font-bold tracking-wider">
