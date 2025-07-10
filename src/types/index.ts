@@ -1,6 +1,6 @@
 import { ComponentType, SVGProps } from "react";
 
-import { MouseEvent } from 'react';
+import { MouseEvent } from "react";
 
 export interface NavbarItem {
   id: string;
@@ -16,4 +16,14 @@ export interface IconProps extends SVGProps<SVGSVGElement> {
 export interface HeaderIcon {
   id: string;
   icon: ComponentType<IconProps>;
+}
+
+export interface Product {
+  id?: string;
+  name?: string;
+  description?: string;
+  price?: number;
+  category?: string;
+  featured?: boolean;
+  image?: string;
 }
