@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 
 // Components
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const titilliumWeb = Titillium_Web({
   variable: "--font-titillium-web",
@@ -37,7 +38,8 @@ export default function RootLayout({
         className={`${titilliumWeb.variable} ${inter.variable} antialiased`}
       >
         <Header />
-        {children}
+        <main className="flex flex-col flex-grow basis-0">{children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -15,7 +15,12 @@
 
 body {
   font-family: var(--font-inter);
-  @apply max-w-10/12 mx-auto bg-zinc-100;
+  box-sizing: border-box;
+  @apply bg-zinc-100;
+}
+
+main {
+  @apply max-w-10/12 mx-auto;
 }
 
 .nav {

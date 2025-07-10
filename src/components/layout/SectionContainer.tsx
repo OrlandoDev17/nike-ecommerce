@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 interface SectionContainerProps {
-  children: ReactNode;
+  children?: ReactNode;
   title: string;
   className?: string;
 }

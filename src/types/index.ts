@@ -39,3 +39,9 @@ export interface DiscoverItem {
   Icon?: ComponentType;
   children?: ReactNode;
 }
+
+export interface AirMaxStory {
+  id: number;
+  title: string;
+  description: string;
+}

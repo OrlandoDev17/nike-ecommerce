@@ -1,5 +1,5 @@
 // Tipos
-import { NavbarItem, HeaderIcon, DiscoverItem } from "@/types";
+import { NavbarItem, HeaderIcon, DiscoverItem, AirMaxStory } from "@/types";
 
 // Iconos
 import {
@@ -181,5 +181,23 @@ export const DISCOVER_NIKE: DiscoverItem[] = [
       </>
     ),
     titleStyles: "text-xl",
+  },
+];
+
+export const AIR_MAX_STORIES: AirMaxStory[] = [
+  {
+    id: 1,
+    title: "1987",
+    description: "Primer Air Max",
+  },
+  {
+    id: 2,
+    title: "35+",
+    description: "Modelos Iconicos",
+  },
+  {
+    id: 3,
+    title: "∞",
+    description: "Innovación",
   },
 ];

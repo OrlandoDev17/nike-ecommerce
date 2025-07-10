@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section className="relative h-screen flex grow-0 justify-between items-center max-w-9/12 mx-auto">
-      <div className="">
+      <div>
         <h1 className="text-7xl font-black font-titillium-web tracking-wider">
           Nike Dunk High
         </h1>
