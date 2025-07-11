@@ -20,9 +20,9 @@ export default function SectionContainer({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: easeInOut }}
       viewport={{ once: true }}
-      className={`flex flex-col gap-12 items-center max-w-9/12 mx-auto ${className}`}
+      className={`flex flex-col gap-12 items-center w-full 2xl:max-w-9/12 mx-auto ${className}`}
     >
-      <h2 className="text-4xl font-bold font-titillium-web tracking-wide">
+      <h2 className="text-4xl font-bold text-center font-titillium-web tracking-wide">
         {title}
       </h2>
       {children}

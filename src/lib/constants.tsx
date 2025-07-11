@@ -1,5 +1,11 @@
 // Tipos
-import { NavbarItem, HeaderIcon, DiscoverItem, AirMaxStory } from "@/types";
+import {
+  NavbarItem,
+  HeaderIcon,
+  DiscoverItem,
+  AirMaxStory,
+  FooterItem,
+} from "@/types";
 
 // Iconos
 import {
@@ -217,5 +223,39 @@ export const AIR_MAX_STORIES: AirMaxStory[] = [
     id: 3,
     title: "∞",
     description: "Innovación",
+  },
+];
+
+export const FOOTER_ITEMS: FooterItem[] = [
+  {
+    id: 1,
+    description:
+      "La mejor selección de productos Nike con la calidad y autenticidad que esperas de la marca líder mundial.",
+    image: "/logo.svg",
+  },
+  {
+    id: 2,
+    title: "Comprar",
+    listItems: [
+      "Sneakers",
+      "Ropa Deportiva",
+      "Accesorios",
+      "Ofertas Especiales",
+    ],
+  },
+  {
+    id: 3,
+    title: "Ayuda",
+    listItems: ["Guía de Tallas", "Envios y Devoluciones", "Contacto", "FAQ"],
+  },
+  {
+    id: 4,
+    title: "Empresa",
+    listItems: [
+      "Sobre Nike",
+      "Carreras",
+      "Términos y Condiciones",
+      "Política de Privacidad",
+    ],
   },
 ];

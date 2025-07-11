@@ -3,9 +3,8 @@ import { Product } from "@/types";
 export const FEATURED_PRODUCTS: Product[] = [
   {
     id: "nike-dunk-low-orange",
-    name: "Nike Dunk Low Retro Orange Blaze",
-    description:
-      "Zapatillas clásicas con diseño retro y colores vibrantes. Perfectas para un look urbano con estilo.",
+    name: "Nike Dunk Low Orange Blaze",
+    description: "Zapatillas clásicas con diseño retro y colores vibrantes.",
     price: 120,
     category: "Zapatillas",
     featured: true,

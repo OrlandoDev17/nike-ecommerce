@@ -47,3 +47,11 @@ export interface AirMaxStory {
   description: string;
   prefix?: string;
 }
+
+export interface FooterItem {
+  id?: number;
+  title?: string;
+  listItems?: string[];
+  description?: string;
+  image?: string;
+}

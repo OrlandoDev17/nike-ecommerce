@@ -4,7 +4,7 @@ import { easeInOut, motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex grow-0 justify-between items-center max-w-9/12 mx-auto">
+    <section className="relative top-24 md:top-0 h-screen flex flex-col md:flex-row grow-0 md:justify-between items-center max-w-full 2xl:max-w-9/12 mx-auto">
       <motion.div
         initial={{ opacity: 0, x: -100, y: -100 }}
         whileInView={{ opacity: 1, x: 0, y: 0 }}
@@ -16,7 +16,7 @@ export default function Hero() {
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.5, ease: easeInOut, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-7xl font-black font-titillium-web tracking-wider"
+          className="text-6xl xl:text-7xl font-black font-titillium-web tracking-wider"
         >
           Nike Dunk High
         </motion.h1>
@@ -25,7 +25,7 @@ export default function Hero() {
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.5, ease: easeInOut, delay: 0.25 }}
           viewport={{ once: true }}
-          className="text-6xl text-primary  font-light font-titillium-web tracking-wide"
+          className="text-5xl xl:text-6xl text-primary  font-light font-titillium-web tracking-wide"
         >
           Black Orange
         </motion.h2>
@@ -34,7 +34,7 @@ export default function Hero() {
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.5, ease: easeInOut, delay: 0.3 }}
           viewport={{ once: true }}
-          className="max-w-xl mt-6 text-gray-600 text-pretty"
+          className="max-w-md xl:max-w-xl mt-6 text-gray-600 text-pretty"
         >
           Este modelo de Nike Dunk High es una declaración de estilo audaz y
           urbano. Su diseño combina una paleta vibrante de naranja intenso con
@@ -62,7 +62,7 @@ export default function Hero() {
         whileInView={{ opacity: 1, x: 0, y: 0 }}
         transition={{ duration: 0.8, ease: easeInOut }}
         viewport={{ once: true }}
-        className="flex-grow basis-0"
+        className="md:flex-grow md:basis-0"
       >
         <img
           className="w-full drop-shadow-2xl drop-shadow-primary"

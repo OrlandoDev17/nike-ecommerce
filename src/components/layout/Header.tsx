@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import { NAVBAR_ITEMS, HEADER_ICONS } from "@/lib/constants";
 import NavbarItem from "./NavbarItem";
+import NavMenu from "./NavMenu";
 
 export default function Header() {
   const [backdropStyle, setBackdropStyle] = useState<React.CSSProperties>({
@@ -41,9 +42,13 @@ export default function Header() {
         onMouseLeave={() => handleHover(null)}
       >
         <picture className="flex flex-grow basis-0 ">
-          <img className="w-24" src="/images/logo.svg" alt="Logo de Nike" />
+          <img
+            className="w-16 lg:w-24"
+            src="/images/logo.svg"
+            alt="Logo de Nike"
+          />
         </picture>
-        <nav>
+        <nav className="hidden lg:block">
           <ul className="flex items-center">
             {NAVBAR_ITEMS.map(({ id, label, href }) => (
               <li
@@ -58,7 +63,7 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <ul className="flex items-center flex-grow basis-0 justify-end">
+        <ul className="hidden lg:flex items-center flex-grow basis-0 justify-end">
           {HEADER_ICONS.map(({ id, icon: Icon }) => (
             <li
               key={id}
@@ -71,6 +76,7 @@ export default function Header() {
             </li>
           ))}
         </ul>
+        <NavMenu />
         <div
           id="menu-backdrop"
           className="absolute bg-primary rounded-full transition-all duration-300 ease-in-out opacity-1 -z-10"

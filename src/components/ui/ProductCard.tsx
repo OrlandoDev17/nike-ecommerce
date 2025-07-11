@@ -10,24 +10,24 @@ export default function ProductCard({
   image,
 }: Product) {
   return (
-    <article className="flex flex-col gap-4 rounded-xl shadow-xl p-4 max-h-[545px] group hover:scale-102 transition-all">
+    <article className="flex flex-col gap-4 rounded-xl shadow-xl p-4  group hover:scale-102 transition-all">
       <header className="bg-gray-200 px-4 rounded-xl h-[250px]">
         <img className="w-full h-full object-contain" src={image} alt={name} />
       </header>
       <div className="mt-2 flex flex-col gap-2">
-        <span className="text-sm bg-gray-200 w-fit px-4 py-0.5 rounded-full">
+        <span className="text-xs 2xl:text-sm bg-gray-200 w-fit px-4 py-0.5 rounded-full">
           {category}
         </span>
-        <h3 className="text-2xl font-bold font-titillium-web group-hover:text-primary transition-all duration-200">
+        <h3 className="text-xl 2xl:text-2xl font-bold font-titillium-web group-hover:text-primary transition-all duration-200">
           {name}
         </h3>
-        <p className="text-sm text-gray-600">{description}</p>
+        <p className="text-sm text-gray-600 text-pretty">{description}</p>
         <div className="flex justify-between items-center mt-2">
-          <span className="text-3xl font-bold font-titillium-web tracking-wide group-hover:text-primary transition-all duration-200">
+          <span className="text-2xl 2xl:text-3xl font-bold font-titillium-web tracking-wide group-hover:text-primary transition-all duration-200">
             ${price}
           </span>
           <Link
-            className="border-1 border-gray-300 px-4 py-2 rounded-md hover:-translate-y-1 hover:bg-gray-200 transition-all"
+            className="text-sm border-1 border-gray-300 px-4 py-2 rounded-md hover:-translate-y-1 hover:bg-gray-200 transition-all"
             href={`/products/${id}`}
           >
             Ver producto

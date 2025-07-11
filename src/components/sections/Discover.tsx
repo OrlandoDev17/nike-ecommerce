@@ -28,7 +28,7 @@ export default function Discover() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="grid grid-cols-6 md:grid-cols-6 grid-rows-4 md:grid-rows-4 gap-4 md:gap-4 m-4"
+        className="flex flex-col lg:grid lg:grid-cols-6 lg:grid-rows-4 gap-4 m-4"
       >
         {DISCOVER_NIKE.map(
           ({
