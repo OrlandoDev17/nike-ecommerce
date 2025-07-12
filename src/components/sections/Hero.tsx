@@ -4,7 +4,7 @@ import { easeInOut, motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <section className="relative top-24 md:top-0 h-screen flex flex-col md:flex-row grow-0 md:justify-between items-center max-w-full 2xl:max-w-9/12 mx-auto">
+    <section className="relative top-24 md:top-0 min-h-screen flex flex-col md:flex-row grow-0 md:justify-between items-center max-w-full 2xl:max-w-9/12 mx-auto">
       <motion.div
         initial={{ opacity: 0, x: -100, y: -100 }}
         whileInView={{ opacity: 1, x: 0, y: 0 }}
@@ -65,7 +65,7 @@ export default function Hero() {
         className="md:flex-grow md:basis-0"
       >
         <img
-          className="w-full drop-shadow-2xl drop-shadow-primary"
+          className="w-full h-full mb-32 md:mb-0 drop-shadow-2xl drop-shadow-primary"
           src="/images/shoe.webp"
           alt="Zapato Promocional de Nike"
         />
