@@ -14,6 +14,7 @@
 }
 
 body {
+  overflow-x: hidden;
   font-family: var(--font-inter);
   box-sizing: border-box;
   @apply bg-zinc-100;

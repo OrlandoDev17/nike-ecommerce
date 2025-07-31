@@ -13,6 +13,7 @@ import {
   CartIcon,
   ProfileIcon,
   NikeIcon,
+  PlantIcon,
 } from "../components/ui/Icons";
 
 import Link from "next/link";
@@ -82,8 +83,9 @@ export const DISCOVER_NIKE: DiscoverItem[] = [
       "col-start-1 row-start-3 row-span-2 md:col-start-1 md:row-start-3 md:col-span-1 md:row-span-2",
     title: "Move to Zero",
     description: "Cero carbono y residuos",
-    titleStyles: "text-sm text-white",
-    paragraphStyles: "text-xs text-gray-400",
+    titleStyles: "text-base text-white",
+    paragraphStyles: "text-sm text-gray-400 text-center",
+    Icon: PlantIcon,
   },
   {
     id: 3,
@@ -139,7 +141,7 @@ export const DISCOVER_NIKE: DiscoverItem[] = [
   {
     id: 6,
     className:
-      "bg-gradient-to-br from-black via-zinc-900 to-slate-700 text-white px-6 py-4",
+      "bg-gradient-to-br from-black via-zinc-900 to-slate-700 text-white px-6 py-4 relative",
     bentoPositions:
       "col-start-4 row-start-2 col-span-2 md:col-start-4 md:row-start-2 md:col-span-2 md:row-span-1",
     title: "Presencia Global",
