@@ -33,12 +33,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body
         className={`${titilliumWeb.variable} ${inter.variable} antialiased`}
       >
         <Header />
-        <main className="flex flex-col flex-grow basis-0">{children}</main>
+        <main className="flex flex-col flex-grow basis-0 min-h-screen">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

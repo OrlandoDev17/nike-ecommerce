@@ -24,8 +24,14 @@ export interface Product {
   description?: string;
   price?: number;
   category?: string;
+  type?: string;
   featured?: boolean;
   image?: string;
+  offer?: boolean;
+  discount?: number;
+  sizes?: string[];
+  colors?: string[];
+  collection?: string;
 }
 
 export interface DiscoverItem {

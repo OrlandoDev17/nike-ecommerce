@@ -30,14 +30,14 @@ export const NAVBAR_ITEMS: NavbarItem[] = [
     href: "/catalogue",
   },
   {
-    id: "sneakers",
-    label: "Sneakers",
-    href: "/sneakers",
+    id: "collections",
+    label: "Colecciones",
+    href: "/collections",
   },
   {
-    id: "offers",
-    label: "Ofertas",
-    href: "/offers",
+    id: "history",
+    label: "Historia",
+    href: "/history",
   },
 ];
 
