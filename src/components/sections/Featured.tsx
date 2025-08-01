@@ -28,7 +28,7 @@ export default function Featured() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-12 mb-4"
+        className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-12 mb-4 max-w-10/12 mx-auto"
       >
         {FEATURED_PRODUCTS.map(
           ({ id, name, description, price, category, image }) => (
