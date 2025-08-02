@@ -30,7 +30,7 @@ export default function SectionContainer({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: easeInOut }}
       viewport={{ once: true }}
-      className={`flex flex-col items-center w-full 2xl:${screenSize} mx-auto ${className} ${
+      className={`flex flex-col items-center w-full md:${screenSize} mx-auto ${className} ${
         type === "home" ? "gap-12" : "gap-4"
       }`}
     >

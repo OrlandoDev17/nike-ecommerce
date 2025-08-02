@@ -4,7 +4,7 @@ import { easeInOut, motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <section className="relative top-24 md:top-0 min-h-screen flex flex-col md:flex-row grow-0 md:justify-between items-center max-w-full 2xl:max-w-9/12 mx-auto">
+    <section className="relative top-24 md:top-0 min-h-screen flex flex-col md:flex-row grow-0 md:justify-between items-center max-w-full md:max-w-9/12 mx-auto">
       <motion.div
         initial={{ opacity: 0, x: -100, y: -100 }}
         whileInView={{ opacity: 1, x: 0, y: 0 }}

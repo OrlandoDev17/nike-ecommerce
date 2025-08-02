@@ -2,147 +2,6 @@ interface Icon {
   className?: string;
 }
 
-export function SearchIcon({ className }: Icon) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={`lucide lucide-search-icon lucide-search ${className}`}
-    >
-      <path d="m21 21-4.34-4.34" />
-      <circle cx="11" cy="11" r="8" />
-    </svg>
-  );
-}
-
-export function CartIcon({ className }: Icon) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={`lucide lucide-shopping-cart-icon lucide-shopping-cart ${className}`}
-    >
-      <circle cx="8" cy="21" r="1" />
-      <circle cx="19" cy="21" r="1" />
-      <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
-    </svg>
-  );
-}
-
-export function ProfileIcon({ className }: Icon) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={`lucide lucide-circle-user-icon lucide-circle-user ${className}`}
-    >
-      <circle cx="12" cy="12" r="10" />
-      <circle cx="12" cy="10" r="3" />
-      <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
-    </svg>
-  );
-}
-
-export function NikeIcon({ className }: Icon) {
-  return (
-    <svg
-      width="60"
-      height="auto"
-      viewBox="0 0 129 46"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
-      <path
-        d="M14.2297 45.9809C10.386 45.8281 7.2413 44.7758 4.78241 42.8213C4.31314 42.4479 3.19492 41.3284 2.81977 40.8562C1.82265 39.6017 1.14474 38.3808 0.692584 37.0262C-0.698771 32.8564 0.0173095 27.3847 2.74079 21.3795C5.07265 16.2384 8.67083 11.1394 14.9484 4.07732C15.8731 3.03815 18.6268 -0.000953674 18.6446 -0.000953674C18.6512 -0.000953674 18.5011 0.259164 18.3122 0.57592C16.68 3.31145 15.2834 6.53363 14.5225 9.32317C13.3003 13.7992 13.4478 17.6404 14.9543 20.6189C15.9935 22.6709 17.7752 24.4483 19.7786 25.4308C23.286 27.1502 28.421 27.2925 34.6919 25.847C35.1237 25.7469 56.5179 20.0644 82.2349 13.219C107.952 6.37295 128.997 0.776111 129 0.780719C129.007 0.786656 69.252 26.3705 38.2322 39.6432C33.3197 41.7446 32.006 42.2754 29.6965 43.0867C23.7928 45.161 18.5044 46.1508 14.2297 45.9809Z"
-        fill="#fff"
-      />
-    </svg>
-  );
-}
-
-export function MenuIcon({ className }: Icon) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={`lucide lucide-menu-icon lucide-menu ${className}`}
-    >
-      <path d="M4 12h16" />
-      <path d="M4 18h16" />
-      <path d="M4 6h16" />
-    </svg>
-  );
-}
-
-export function ClockIcon({ className }: Icon) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={`lucide lucide-clock-icon lucide-clock ${className}`}
-    >
-      <path d="M12 6v6l4 2" />
-      <circle cx="12" cy="12" r="10" />
-    </svg>
-  );
-}
-
-export function CloseIcon({ className }: Icon) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={`lucide lucide-x-icon lucide-x ${className}`}
-    >
-      <path d="M18 6 6 18" />
-      <path d="m6 6 12 12" />
-    </svg>
-  );
-}
-
 export function PlantIcon({ className }: Icon) {
   return (
     <svg
@@ -332,6 +191,166 @@ export function PlantIcon({ className }: Icon) {
           fill="#69341c"
         />
       </g>
+    </svg>
+  );
+}
+
+export function SearchIcon({ className }: Icon) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-search-icon lucide-search ${className}`}
+    >
+      <path d="m21 21-4.34-4.34" />
+      <circle cx="11" cy="11" r="8" />
+    </svg>
+  );
+}
+
+export function CartIcon({ className }: Icon) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-shopping-cart-icon lucide-shopping-cart ${className}`}
+    >
+      <circle cx="8" cy="21" r="1" />
+      <circle cx="19" cy="21" r="1" />
+      <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+    </svg>
+  );
+}
+
+export function ProfileIcon({ className }: Icon) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-circle-user-icon lucide-circle-user ${className}`}
+    >
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="10" r="3" />
+      <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662" />
+    </svg>
+  );
+}
+
+export function NikeIcon({ className }: Icon) {
+  return (
+    <svg
+      width="60"
+      height="auto"
+      viewBox="0 0 129 46"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M14.2297 45.9809C10.386 45.8281 7.2413 44.7758 4.78241 42.8213C4.31314 42.4479 3.19492 41.3284 2.81977 40.8562C1.82265 39.6017 1.14474 38.3808 0.692584 37.0262C-0.698771 32.8564 0.0173095 27.3847 2.74079 21.3795C5.07265 16.2384 8.67083 11.1394 14.9484 4.07732C15.8731 3.03815 18.6268 -0.000953674 18.6446 -0.000953674C18.6512 -0.000953674 18.5011 0.259164 18.3122 0.57592C16.68 3.31145 15.2834 6.53363 14.5225 9.32317C13.3003 13.7992 13.4478 17.6404 14.9543 20.6189C15.9935 22.6709 17.7752 24.4483 19.7786 25.4308C23.286 27.1502 28.421 27.2925 34.6919 25.847C35.1237 25.7469 56.5179 20.0644 82.2349 13.219C107.952 6.37295 128.997 0.776111 129 0.780719C129.007 0.786656 69.252 26.3705 38.2322 39.6432C33.3197 41.7446 32.006 42.2754 29.6965 43.0867C23.7928 45.161 18.5044 46.1508 14.2297 45.9809Z"
+        fill="#fff"
+      />
+    </svg>
+  );
+}
+
+export function MenuIcon({ className }: Icon) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-menu-icon lucide-menu ${className}`}
+    >
+      <path d="M4 12h16" />
+      <path d="M4 18h16" />
+      <path d="M4 6h16" />
+    </svg>
+  );
+}
+
+export function ClockIcon({ className }: Icon) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-clock-icon lucide-clock ${className}`}
+    >
+      <path d="M12 6v6l4 2" />
+      <circle cx="12" cy="12" r="10" />
+    </svg>
+  );
+}
+
+export function CloseIcon({ className }: Icon) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-x-icon lucide-x ${className}`}
+    >
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+    </svg>
+  );
+}
+
+export function FilterIcon({ className }: Icon) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={`lucide lucide-funnel-icon lucide-funnel ${className}`}
+    >
+      <path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z" />
     </svg>
   );
 }

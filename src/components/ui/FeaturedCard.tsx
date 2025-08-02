@@ -21,7 +21,7 @@ export default function FeaturedCard({
         <h3 className="text-xl 2xl:text-2xl font-bold font-titillium-web group-hover:text-primary transition-all duration-200">
           {name}
         </h3>
-        <p className="text-sm text-gray-600 text-pretty">{description}</p>
+        <p className="text-sm text-gray-600 text-balance">{description}</p>
         <div className="flex justify-between items-center mt-2">
           <span className="text-2xl 2xl:text-3xl font-bold font-titillium-web tracking-wide group-hover:text-primary transition-all duration-200">
             ${price}
