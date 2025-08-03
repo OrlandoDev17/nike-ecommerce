@@ -1,6 +1,6 @@
 import { Products } from "@/lib/mocks";
 import SectionContainer from "../layout/SectionContainer";
-import OfferCard from "../ui/OfferCard";
+import OfferCard from "@/components/ui/OfferCard";
 
 export default function Offers() {
   const offerProducts = Products.filter((product) => product.offer);

@@ -1,5 +1,4 @@
 import Offers from "@/components/sections/Offers";
-import Catalogue from "@/components/sections/Catalogue";
 
 export default function CataloguePage() {
   return (
@@ -8,7 +7,6 @@ export default function CataloguePage() {
         Catálogo<span className="text-primary"> Nike</span>
       </h2>
       <Offers />
-      <Catalogue />
     </div>
   );
 }
