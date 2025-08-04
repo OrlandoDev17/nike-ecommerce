@@ -35,7 +35,7 @@ export default function Header() {
   return (
     <header
       id="header"
-      className="fixed top-0 w-full left-0 z-50 nav backdrop-blur-lg"
+      className="fixed top-0 w-full left-0 z-50 nav bg-zinc-100"
     >
       <div
         className="flex items-center justify-between max-w-10/12 mx-auto py-4"
