@@ -62,7 +62,7 @@ export const FEATURED_PRODUCTS: Product[] = [
   },
 ];
 
-export const Products: Product[] = [
+export const PRODUCTS: Product[] = [
   {
     id: "air-max-90-black-volt",
     name: "Nike Air Max 90",

@@ -1,8 +1,8 @@
-import { Products } from "@/lib/mocks";
+import { PRODUCTS } from "@/lib/mocks";
 import OfferCard from "@/components/ui/OfferCard";
 
 export default function Offers() {
-  const offerProducts = Products.filter((product) => product.offer);
+  const offerProducts = PRODUCTS.filter((product) => product.offer);
 
   return (
     <section

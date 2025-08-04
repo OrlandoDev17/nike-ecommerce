@@ -1,6 +1,6 @@
 "use client";
 
-import FeaturedCard from "../ui/FeaturedCard";
+import ProductCard from "@/components/ui/ProductCard";
 import SectionContainer from "../layout/SectionContainer";
 import { FEATURED_PRODUCTS } from "@/lib/mocks";
 import { motion } from "motion/react";
@@ -33,7 +33,7 @@ export default function Featured() {
         {FEATURED_PRODUCTS.map(
           ({ id, name, description, price, category, image }) => (
             <motion.div key={id} variants={item}>
-              <FeaturedCard
+              <ProductCard
                 name={name}
                 description={description}
                 price={price}
