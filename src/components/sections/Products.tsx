@@ -14,7 +14,7 @@ import { useDebouncedValue } from "@/hooks/useDebouncedValue";
 import { PRODUCTS } from "@/lib/mocks";
 
 export default function Products() {
-  const { filterProducts, searchQuery, setSearchQuery } = useFilterStore();
+  const { filterProducts, searchQuery } = useFilterStore();
   const { currentPage, totalPages, startIndex, endIndex, setCurrentPage } =
     usePagination({
       totalItems: PRODUCTS.length,

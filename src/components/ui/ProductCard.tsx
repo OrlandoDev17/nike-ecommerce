@@ -31,7 +31,11 @@ export default function FeaturedCard({
             <LimitedBadge />
           </div>
         )}
-        <img className="w-full h-full object-contain" src={image} alt={name} />
+        <img
+          className="w-full h-full object-contain"
+          src={`${image}`}
+          alt={`${name}`}
+        />
       </header>
       <div className="mt-2 flex flex-col gap-2">
         <div className="flex items-center gap-2">

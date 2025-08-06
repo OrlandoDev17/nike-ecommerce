@@ -26,7 +26,7 @@ export default function OfferCard({
         </div>
         <img
           className="w-full h-full object-contain"
-          src={image}
+          src={`${image}`}
           alt={`Imagen del producto ${name}`}
         />
       </header>
