@@ -1,15 +1,24 @@
 "use client";
 
+// Hooks
 import { useState } from "react";
-import { FilterIcon, SearchIcon } from "./Icons";
+import { useFilterStore } from "@/store/useFiltersStore";
+// Componentes
 import FiltersModal from "./FiltersModal";
 import { motion } from "motion/react";
+// Iconos
+import { FilterIcon, SearchIcon } from "./Icons";
 
 export default function FiltersContainer() {
   const [isOpen, setIsOpen] = useState(false);
+  const { setSearchQuery } = useFilterStore();
 
   const handleModalState = () => {
     setIsOpen((isOpen) => !isOpen);
+  };
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
   };
 
   const variants = {
@@ -17,19 +26,19 @@ export default function FiltersContainer() {
       opacity: 0,
       visibility: "hidden",
       height: 0,
-      zIndex: -1,
+      zIndex: 10,
     },
     visible: {
       opacity: 1,
       visibility: "visible",
       height: "auto",
-      zIndex: 1,
+      zIndex: 10,
     },
     exit: {
       opacity: 0,
       visibility: "hidden",
       height: 0,
-      zIndex: -1,
+      zIndex: 10,
     },
   };
   return (
@@ -41,6 +50,7 @@ export default function FiltersContainer() {
             className="flex-grow basis-0 w-full border-1 border-gray-400 rounded-lg px-10 py-3 focus:outline-none focus:border-primary focus:shadow-lg"
             type="search"
             placeholder="Buscar productos..."
+            onChange={handleSearch}
           />
         </form>
         <button
