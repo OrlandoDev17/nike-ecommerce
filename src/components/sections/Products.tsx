@@ -14,19 +14,24 @@ import { useDebouncedValue } from "@/hooks/useDebouncedValue";
 import { PRODUCTS } from "@/lib/mocks";
 
 export default function Products() {
-  const { filterProducts, searchQuery } = useFilterStore();
-  const { currentPage, totalPages, startIndex, endIndex, setCurrentPage } =
-    usePagination({
-      totalItems: PRODUCTS.length,
-    });
+  const { filters, filterProducts, searchQuery } = useFilterStore();
 
   const debouncedQuery = useDebouncedValue(searchQuery, 300);
 
   const filteredProducts = useMemo(() => {
     return filterProducts(PRODUCTS);
-  }, [PRODUCTS, filterProducts, debouncedQuery]);
+  }, [filterProducts, debouncedQuery, filters]);
+
+  const { currentPage, totalPages, startIndex, endIndex, setCurrentPage } =
+    usePagination({
+      totalItems: filteredProducts.length,
+    });
 
   const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [debouncedQuery, filters, setCurrentPage]);
 
   useEffect(() => {
     const container = document.getElementById("products");
