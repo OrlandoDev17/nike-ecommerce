@@ -72,7 +72,7 @@ export const PRODUCTS: Product[] = [
     description:
       "Diseño clásico con amortiguación Air visible y detalles retro.",
     image: "/images/products/air-max-90-black-volt.webp",
-    category: "Sneakers",
+    category: "Apparel",
     type: "Sneakers",
     collection: "Air Max",
     offer: false,
@@ -116,7 +116,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/products/air-force-1-kids.webp",
     category: "Kids",
     type: "Sneakers",
-    collection: "Air Force",
+    collection: "Air Max",
     offer: true,
     discount: 30,
   },
@@ -130,7 +130,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/products/winflo-11-mens.webp",
     category: "Running",
     type: "Sneakers",
-    collection: "Winflo",
+    collection: "React",
     offer: false,
   },
   {
@@ -213,7 +213,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/products/merc-superfly-10-academy.webp",
     category: "Football",
     type: "Sneakers",
-    collection: "Mercurial",
+    collection: "",
     offer: false,
   },
   {
@@ -240,7 +240,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/products/sportswear-tee-men.webp",
     category: "Training",
     type: "Ropa",
-    collection: "Sportswear",
+    collection: "",
     offer: false,
   },
   {
@@ -268,7 +268,7 @@ export const PRODUCTS: Product[] = [
     image: "/images/products/fc-barcelona-home-jersey.webp",
     category: "Football",
     type: "Ropa",
-    collection: "FC Barcelona",
+    collection: "",
     offer: false,
   },
   {
@@ -279,7 +279,7 @@ export const PRODUCTS: Product[] = [
     colors: ["White", "Purple"],
     description: "Estilo audaz con unidad Air Max y diseño futurista.",
     image: "/images/products/air-max-craze.webp",
-    category: "Sneakers",
+    category: "Apparel",
     type: "Sneakers",
     collection: "Air Max",
     offer: true,

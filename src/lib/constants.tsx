@@ -261,3 +261,100 @@ export const FOOTER_ITEMS: FooterItem[] = [
     ],
   },
 ];
+
+export const SELECTIONS = [
+  {
+    id: "type",
+    title: "Tipo",
+    options: [
+      {
+        id: "all-types",
+        title: "Todas",
+      },
+      {
+        id: "Sneakers",
+        title: "Sneakers",
+      },
+      {
+        id: "Ropa",
+        title: "Ropa",
+      },
+      {
+        id: "Accesorios",
+        title: "Accesorios",
+      },
+    ],
+  },
+  {
+    id: "category",
+    title: "Categorías",
+    options: [
+      {
+        id: "all-categories",
+        title: "Todas",
+      },
+      {
+        id: "Training",
+        title: "Training",
+      },
+      {
+        id: "Running",
+        title: "Running",
+      },
+      {
+        id: "Basketball",
+        title: "Basketball",
+      },
+      {
+        id: "Football",
+        title: "Football",
+      },
+      {
+        id: "Skateboarding",
+        title: "Skateboarding",
+      },
+      {
+        id: "Kids",
+        title: "Kids",
+      },
+      {
+        id: "Apparel",
+        title: "Apparel",
+      },
+    ],
+  },
+  {
+    id: "collections",
+    title: "Colecciones",
+    options: [
+      {
+        id: "all-collections",
+        title: "Todas",
+      },
+      {
+        id: "Air Max",
+        title: "Air Max",
+      },
+      {
+        id: "Air Jordan",
+        title: "Air Jordan",
+      },
+      {
+        id: "Dunk",
+        title: "Dunk",
+      },
+      {
+        id: "SB",
+        title: "SB",
+      },
+      {
+        id: "Pegasus",
+        title: "Pegasus",
+      },
+      {
+        id: "React",
+        title: "React",
+      },
+    ],
+  },
+];
