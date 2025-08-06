@@ -16,7 +16,7 @@ export default function Offers() {
         ¡Aprovecha estos descuentos increíbles por tiempo limitado!
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-11/12 2xl:max-w-9/12 mx-auto mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-11/12 2xl:max-w-10/12 mx-auto mt-12">
         {offerProducts.map((product) => (
           <OfferCard key={product.id} {...product} />
         ))}

@@ -52,7 +52,7 @@ export default function FeaturedCard({
             <span
               className={`text-2xl 2xl:text-3xl font-bold font-titillium-web tracking-wide  transition-all duration-200 ${
                 offer
-                  ? "line-through text-gray-400 text-xl"
+                  ? "line-through text-gray-400 2xl:text-xl"
                   : "group-hover:text-primary"
               }`}
             >
