@@ -13,9 +13,9 @@ export interface IconProps extends SVGProps<SVGSVGElement> {
   className?: string;
 }
 
-export interface HeaderIcon {
+export interface HeaderButtons {
   id: string;
-  icon: ComponentType<IconProps>;
+  content: ReactNode;
 }
 
 export interface Product {

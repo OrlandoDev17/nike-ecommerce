@@ -1,7 +1,7 @@
 // Tipos
 import {
   NavbarItem,
-  HeaderIcon,
+  HeaderButtons,
   DiscoverItem,
   AirMaxStory,
   FooterItem,
@@ -38,21 +38,6 @@ export const NAVBAR_ITEMS: NavbarItem[] = [
     id: "history",
     label: "Historia",
     href: "/history",
-  },
-];
-
-export const HEADER_ICONS: HeaderIcon[] = [
-  {
-    id: "search",
-    icon: SearchIcon,
-  },
-  {
-    id: "cart",
-    icon: CartIcon,
-  },
-  {
-    id: "profile",
-    icon: ProfileIcon,
   },
 ];
 

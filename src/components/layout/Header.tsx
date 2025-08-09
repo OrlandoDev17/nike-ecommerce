@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { NAVBAR_ITEMS, HEADER_ICONS } from "@/lib/constants";
+import { NAVBAR_ITEMS } from "@/lib/constants";
 import NavbarItem from "./NavbarItem";
 import NavMenu from "./NavMenu";
 
@@ -63,19 +63,6 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <ul className="hidden lg:flex items-center flex-grow basis-0 justify-end">
-          {HEADER_ICONS.map(({ id, icon: Icon }) => (
-            <li
-              key={id}
-              className="px-4 inline-block"
-              onMouseEnter={(e) =>
-                handleHover(e.currentTarget.getBoundingClientRect())
-              }
-            >
-              <Icon className="size-6" />
-            </li>
-          ))}
-        </ul>
         <NavMenu />
         <div
           id="menu-backdrop"
