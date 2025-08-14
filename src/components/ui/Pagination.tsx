@@ -2,12 +2,14 @@ interface Props {
   currentPage: number;
   totalPages: number;
   setCurrentPage: (page: number) => void;
+  onPageChange?: () => void;
 }
 
 export default function Pagination({
   currentPage,
   totalPages,
   setCurrentPage,
+  onPageChange,
 }: Props) {
   return (
     <div className="flex gap-2 justify-center my-4">
@@ -16,7 +18,12 @@ export default function Pagination({
         return (
           <button
             key={page}
-            onClick={() => setCurrentPage(page)}
+            onClick={() => {
+              setCurrentPage(page);
+              if (onPageChange) {
+                onPageChange();
+              }
+            }}
             className={`px-4 py-2 rounded-xl transition ${
               currentPage === page
                 ? "bg-primary text-white"

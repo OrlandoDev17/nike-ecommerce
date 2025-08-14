@@ -61,3 +61,12 @@ export interface FooterItem {
   description?: string;
   image?: string;
 }
+
+export interface CollectionCard {
+  id: string;
+  name: string;
+  image: string;
+  description: string;
+  url: string;
+  featured?: boolean;
+}

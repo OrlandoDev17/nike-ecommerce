@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import { NAVBAR_ITEMS } from "@/lib/constants";
 import NavbarItem from "./NavbarItem";
 import NavMenu from "./NavMenu";
+import { CartIcon, ProfileIcon } from "../ui/Icons";
 
 export default function Header() {
   const [backdropStyle, setBackdropStyle] = useState<React.CSSProperties>({
@@ -63,6 +64,22 @@ export default function Header() {
             ))}
           </ul>
         </nav>
+        <ul className="flex items-center gap-4 flex-grow basis-0 justify-end">
+          <li
+            onMouseEnter={(e) =>
+              handleHover(e.currentTarget.getBoundingClientRect())
+            }
+          >
+            <CartIcon className="size-6 cursor-pointer hover:text-primary transition" />
+          </li>
+          <li
+            onMouseEnter={(e) =>
+              handleHover(e.currentTarget.getBoundingClientRect())
+            }
+          >
+            <ProfileIcon className="size-6 cursor-pointer hover:text-primary transition" />
+          </li>
+        </ul>
         <NavMenu />
         <div
           id="menu-backdrop"

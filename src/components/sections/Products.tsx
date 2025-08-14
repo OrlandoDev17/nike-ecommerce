@@ -6,7 +6,7 @@ import ProductCard from "@/components/ui/ProductCard";
 import Pagination from "@/components/ui/Pagination";
 import { AnimatePresence, motion } from "motion/react";
 //Hooks
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { usePagination } from "@/hooks/usePagination";
 import { useFilterStore } from "@/store/useFiltersStore";
 import { useDebouncedValue } from "@/hooks/useDebouncedValue";
@@ -29,16 +29,17 @@ export default function Products() {
 
   const paginatedProducts = filteredProducts.slice(startIndex, endIndex);
 
+  const productsGridRef = useRef<HTMLDivElement>(null);
+
+  const handlePageChange = () => {
+    if (productsGridRef.current) {
+      productsGridRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     setCurrentPage(1);
   }, [debouncedQuery, filters, setCurrentPage]);
-
-  useEffect(() => {
-    const container = document.getElementById("products");
-    if (container) {
-      container.scrollIntoView({ behavior: "smooth" });
-    }
-  }, [currentPage]);
 
   return (
     <section
@@ -56,6 +57,7 @@ export default function Products() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
+          ref={productsGridRef}
           className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-8"
         >
           {paginatedProducts.map((product) => (
@@ -68,6 +70,7 @@ export default function Products() {
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
+          onPageChange={handlePageChange}
           setCurrentPage={setCurrentPage}
         />
       </div>
