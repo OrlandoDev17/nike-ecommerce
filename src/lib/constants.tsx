@@ -1,7 +1,6 @@
 // Tipos
 import {
   NavbarItem,
-  HeaderButtons,
   DiscoverItem,
   AirMaxStory,
   FooterItem,
@@ -9,13 +8,7 @@ import {
 } from "@/types";
 
 // Iconos
-import {
-  SearchIcon,
-  CartIcon,
-  ProfileIcon,
-  NikeIcon,
-  PlantIcon,
-} from "../components/ui/Icons";
+import { NikeIcon, PlantIcon } from "../components/ui/Icons";
 
 import Link from "next/link";
 
@@ -250,7 +243,7 @@ export const FOOTER_ITEMS: FooterItem[] = [
 
 export const SELECTIONS = [
   {
-    id: "type",
+    id: "types",
     title: "Tipo",
     options: [
       {
@@ -272,7 +265,7 @@ export const SELECTIONS = [
     ],
   },
   {
-    id: "category",
+    id: "categories",
     title: "Categorías",
     options: [
       {
@@ -344,6 +337,33 @@ export const SELECTIONS = [
     ],
   },
 ];
+
+export const SORTS = [
+  {
+    id: 'most-recent',
+    title: 'Mas Recientes'
+  },
+  {
+    id: 'most-popular',
+    title: 'Mas Populares'
+  },
+  {
+    id: 'price-asc',
+    title: 'Precio: de Mayor a Menor'
+  },
+  {
+    id: 'price-desc',
+    title: 'Precio: de Menor a Mayor'
+  },
+  {
+    id: 'alphabetical-asc',
+    title: 'Nombre: A-Z'
+  },
+  {
+    id: 'alphabetical-desc',
+    title: 'Nombre: Z-A'
+  }
+]
 
 export const COLLECTIONS: CollectionCard[] = [
   {
