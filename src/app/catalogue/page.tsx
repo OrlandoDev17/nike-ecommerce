@@ -1,5 +1,5 @@
 import Offers from "@/components/sections/Offers";
-import Products from "@/components/sections/Products";
+import ProductsWrapper from "@/components/sections/products/ProductsWrapper";
 
 export default function CataloguePage() {
   return (
@@ -8,7 +8,7 @@ export default function CataloguePage() {
         Catálogo<span className="text-primary"> Nike</span>
       </h2>
       <Offers />
-      <Products />
+      <ProductsWrapper />
     </div>
   );
 }

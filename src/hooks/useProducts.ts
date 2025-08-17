@@ -1,49 +1,40 @@
 import { useState, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
+import { ProductFilters, useProductFilters } from "./useProductFilters";
 
-interface Product {
-  id: string;
-  name: string;
-  price: number;
-  image_url: string;
-  collection_slug?: string;
-  category_slug?: string;
-  // Add other product properties as needed
-}
-
-export function useProducts(filters?: {
-  collection?: string;
-  category?: string;
-}) {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
+export function useProducts(filters?: ProductFilters) {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
+      setLoading(true);
       let query = supabase.from("products").select("*");
-
-      if (filters?.collection) {
-        query = query.eq("collection_slug", filters.collection);
-      }
 
       if (filters?.category) {
         query = query.eq("category_slug", filters.category);
       }
+      if (filters?.collection) {
+        query = query.eq("collection_slug", filters.collection);
+      }
+      if (filters?.types) {
+        query = query.eq("types_slug", filters.types);
+      }
 
-      const { data, error } = await query.returns<Product[]>();
+      const { data, error } = await query;
 
       if (error) {
         setError(error.message);
         setProducts([]);
       } else {
-        setProducts(data);
-        setLoading(false);
+        setProducts(data as any);
+        setError(null);
       }
+      setLoading(false);
     };
-
     fetchProducts();
-  }, [filters?.collection, filters?.category]);
+  }, [filters]);
 
   return { products, loading, error };
 }

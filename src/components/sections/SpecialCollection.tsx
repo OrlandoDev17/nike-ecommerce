@@ -4,7 +4,7 @@ import Link from "next/link";
 import SectionContainer from "../layout/SectionContainer";
 import { AIR_MAX_STORIES } from "@/lib/constants";
 import { motion, easeInOut } from "motion/react";
-import AnimatedCounter from "../ui/AnimatedCounter";
+import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 export default function SpecialCollection() {
   return (
