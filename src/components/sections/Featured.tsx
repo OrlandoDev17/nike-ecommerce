@@ -30,19 +30,11 @@ export default function Featured() {
         viewport={{ once: true }}
         className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-12 mb-4 md:max-w-full 2xl:max-w-10/12 mx-auto"
       >
-        {FEATURED_PRODUCTS.map(
-          ({ id, name, description, price, category, image }) => (
-            <motion.div key={id} variants={item}>
-              <ProductCard
-                name={name}
-                description={description}
-                price={price}
-                category={category}
-                image={image}
-              />
-            </motion.div>
-          )
-        )}
+        {FEATURED_PRODUCTS.map((product) => (
+          <motion.div key={product.id} variants={item}>
+            <ProductCard {...product} />
+          </motion.div>
+        ))}
       </motion.div>
     </SectionContainer>
   );
