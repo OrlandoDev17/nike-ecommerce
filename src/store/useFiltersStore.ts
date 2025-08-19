@@ -37,16 +37,16 @@ export const useFilterStore = create<FilterStore>((set, get) => ({
 
       const matchCollection =
         filters.collections === "all-collections" ||
-        product.collection === filters.collections;
+        product.collection_slug === filters.collections;
 
       const matchCategory =
         filters.category === "all-categories" ||
-        product.category === filters.category;
+        product.category_slug === filters.category;
 
       const matchSearch =
         query === "" ||
         product.name?.toLowerCase().includes(query) ||
-        product.collection?.toLowerCase().includes(query) ||
+        product.collection_slug?.toLowerCase().includes(query) ||
         product.description?.toLowerCase().includes(query);
       return matchType && matchCollection && matchCategory && matchSearch;
     });
