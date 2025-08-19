@@ -30,6 +30,8 @@ export interface Product {
   colors?: string[];
   collection_slug?: string;
   category_slug?: string;
+  offer?: boolean;
+  discount?: number;
 }
 
 export interface DiscoverItem {
