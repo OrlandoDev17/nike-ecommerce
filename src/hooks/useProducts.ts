@@ -18,7 +18,7 @@ export function useProducts(filters?: ProductFilters) {
   useEffect(() => {
     const fetchProducts = async () => {
       setLoading(true);
-      let query = supabase.from("products").select("*");
+      const query = supabase.from("products").select("*");
 
       const { data, error } = await query;
 
