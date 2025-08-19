@@ -39,7 +39,7 @@ export default function FiltersWrapper() {
   };
 
   return (
-    <header className="flex flex-col gap-4 justify-center items-center w-full mb-12">
+    <header className="flex flex-col gap-4 justify-center items-center w-full">
       <div className="flex gap-4 w-full">
         <div className="relative flex-grow basis-0 w-full">
           <SearchIcon className="size-5 text-gray-500 absolute top-1/2 -translate-y-1/2 left-3 cursor-pointer" />

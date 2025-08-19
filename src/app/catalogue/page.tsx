@@ -1,4 +1,3 @@
-import Offers from "@/components/sections/Offers";
 import ProductsWrapper from "@/components/sections/products/ProductsWrapper";
 
 export default function CataloguePage() {
@@ -7,7 +6,6 @@ export default function CataloguePage() {
       <h2 className="text-5xl font-black tracking-wide">
         Catálogo<span className="text-primary"> Nike</span>
       </h2>
-      <Offers />
       <ProductsWrapper />
     </div>
   );

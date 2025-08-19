@@ -23,15 +23,13 @@ export interface Product {
   name?: string;
   description?: string;
   price?: number;
-  category?: string;
   type?: string;
   featured?: boolean;
   image?: string;
-  offer?: boolean;
-  discount?: number;
   sizes?: string[];
   colors?: string[];
-  collection?: string;
+  collection_slug?: string;
+  category_slug?: string;
 }
 
 export interface DiscoverItem {

@@ -1,10 +1,18 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
-import { ProductFilters, useProductFilters } from "./useProductFilters";
+import { Product } from "@/types";
+
+export type ProductFilters = {
+  type?: string;
+  category?: string;
+  collection?: string;
+  sortBy?: string;
+  search?: string;
+};
 
 export function useProducts(filters?: ProductFilters) {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -12,27 +20,19 @@ export function useProducts(filters?: ProductFilters) {
       setLoading(true);
       let query = supabase.from("products").select("*");
 
-      if (filters?.category) {
-        query = query.eq("category_slug", filters.category);
-      }
-      if (filters?.collection) {
-        query = query.eq("collection_slug", filters.collection);
-      }
-      if (filters?.types) {
-        query = query.eq("types_slug", filters.types);
-      }
-
       const { data, error } = await query;
 
       if (error) {
         setError(error.message);
         setProducts([]);
       } else {
-        setProducts(data as any);
+        setProducts(data as Product[]);
         setError(null);
       }
+
       setLoading(false);
     };
+
     fetchProducts();
   }, [filters]);
 
