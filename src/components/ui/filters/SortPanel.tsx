@@ -1,6 +1,5 @@
 import { SORTS } from "@/lib/constants";
 import { useProductFilters } from "@/context/ProductFilterContext";
-import { FilterState } from "@/types";
 
 export default function SortPanel() {
   const context = useProductFilters();
