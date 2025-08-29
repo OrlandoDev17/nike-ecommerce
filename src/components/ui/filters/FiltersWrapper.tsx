@@ -1,14 +1,32 @@
 "use client";
 
 import { FilterIcon, OrderIcon, SearchIcon } from "@/components/ui/Icons";
-import SelectionFilter from "./SelectionFilter";
+import SelectionPanel from "./SelectionPanel";
 import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
-import SortFilter from "./sort/SortFilter";
+import SortPanel from "./SortPanel";
+import { useProductFilters } from "@/context/ProductFilterContext";
 
 export default function FiltersWrapper() {
   const [filterOpen, setFilterOpen] = useState(false);
   const [sortOpen, setSortOpen] = useState(false);
+
+  const context = useProductFilters();
+
+  if (!context) {
+    throw new Error(
+      "useProductFilters must be used within a ProductFilterProvider"
+    );
+  }
+
+  const { filters, setFilters } = context;
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFilters((prev) => ({
+      ...prev,
+      search: e.target.value,
+    }));
+  };
 
   const handleFilterOpen = () => {
     setFilterOpen(!filterOpen);
@@ -47,6 +65,8 @@ export default function FiltersWrapper() {
             className="flex-grow basis-0 w-full p-3 px-10 rounded-lg border-1 border-gray-400 focus:border-primary focus:shadow-lg focus:outline-none"
             type="search"
             placeholder="Buscar Productos por Nombre..."
+            value={filters.search}
+            onChange={handleSearch}
           />
         </div>
         <div>
@@ -81,7 +101,7 @@ export default function FiltersWrapper() {
               variants={variants}
               transition={{ duration: 0.3 }}
             >
-              <SelectionFilter />
+              <SelectionPanel />
             </motion.div>
           )}
         </AnimatePresence>
@@ -95,7 +115,7 @@ export default function FiltersWrapper() {
               variants={variants}
               transition={{ duration: 0.3 }}
             >
-              <SortFilter />
+              <SortPanel />
             </motion.div>
           )}
         </AnimatePresence>

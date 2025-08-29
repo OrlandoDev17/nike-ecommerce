@@ -70,3 +70,11 @@ export interface CollectionCard {
   url: string;
   featured?: boolean;
 }
+
+export interface FilterState {
+  type: string;
+  category: string;
+  collection: string;
+  sortBy: string;
+  search: string;
+}

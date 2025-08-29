@@ -6,7 +6,7 @@ export interface SelectionItem {
     title: string;
   }[];
   selected: string;
-  onSelect: (group: string, value: string) => void;
+  onSelect: (value: string) => void;
 }
 
 export default function SelectionItem({
@@ -26,7 +26,7 @@ export default function SelectionItem({
           <article
             key={option.id}
             className="flex gap-2 items-center cursor-pointer group"
-            onClick={() => onSelect(id, option.id)}
+            onClick={() => onSelect(option.id)}
           >
             <div
               className={`relative size-5 rounded-full ${

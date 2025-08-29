@@ -13,7 +13,7 @@ export default function FeaturedCard({
   image,
 }: Product) {
   return (
-    <article className="flex flex-col gap-4 rounded-xl shadow-xl p-4 group hover:scale-102 transition-all">
+    <article className="flex flex-col gap-4 rounded-xl shadow-xl p-4 group hover:scale-102 transition-all z-10">
       <header className="bg-gray-300/70 px-4 rounded-xl h-[250px] relative">
         <img
           className="w-full h-full object-contain"

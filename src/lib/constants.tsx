@@ -243,7 +243,7 @@ export const FOOTER_ITEMS: FooterItem[] = [
 
 export const SELECTIONS = [
   {
-    id: "types",
+    id: "type",
     title: "Tipo",
     options: [
       {
@@ -251,59 +251,47 @@ export const SELECTIONS = [
         title: "Todas",
       },
       {
-        id: "Sneakers",
+        id: "sneakers",
         title: "Sneakers",
       },
       {
-        id: "Ropa",
+        id: "ropa",
         title: "Ropa",
       },
       {
-        id: "Accesorios",
+        id: "accesorios",
         title: "Accesorios",
       },
     ],
   },
   {
-    id: "categories",
-    title: "Categorías",
+    id: "category",
+    title: "Categoría",
     options: [
       {
         id: "all-categories",
         title: "Todas",
       },
       {
-        id: "Training",
-        title: "Training",
-      },
-      {
-        id: "Running",
+        id: "running",
         title: "Running",
       },
       {
-        id: "Basketball",
+        id: "basketball",
         title: "Basketball",
       },
       {
-        id: "Football",
-        title: "Football",
+        id: "lifestyle",
+        title: "Lifestyle",
       },
       {
-        id: "Skateboarding",
+        id: "skateboarding",
         title: "Skateboarding",
-      },
-      {
-        id: "Kids",
-        title: "Kids",
-      },
-      {
-        id: "Apparel",
-        title: "Apparel",
       },
     ],
   },
   {
-    id: "collections",
+    id: "collection",
     title: "Colecciones",
     options: [
       {
@@ -311,27 +299,31 @@ export const SELECTIONS = [
         title: "Todas",
       },
       {
-        id: "Air Max",
+        id: "air-max",
         title: "Air Max",
       },
       {
-        id: "Air Jordan",
+        id: "air-jordan",
         title: "Air Jordan",
       },
       {
-        id: "Dunk",
+        id: "air-force-1",
+        title: "Air Force 1",
+      },
+      {
+        id: "dunk",
         title: "Dunk",
       },
       {
-        id: "SB",
+        id: "sb",
         title: "SB",
       },
       {
-        id: "Pegasus",
+        id: "pegasus",
         title: "Pegasus",
       },
       {
-        id: "React",
+        id: "react",
         title: "React",
       },
     ],
@@ -340,30 +332,30 @@ export const SELECTIONS = [
 
 export const SORTS = [
   {
-    id: 'most-recent',
-    title: 'Mas Recientes'
+    id: "most-recent",
+    title: "Mas Recientes",
   },
   {
-    id: 'most-popular',
-    title: 'Mas Populares'
+    id: "most-popular",
+    title: "Mas Populares",
   },
   {
-    id: 'price-asc',
-    title: 'Precio: de Mayor a Menor'
+    id: "price-asc",
+    title: "Precio: de Mayor a Menor",
   },
   {
-    id: 'price-desc',
-    title: 'Precio: de Menor a Mayor'
+    id: "price-desc",
+    title: "Precio: de Menor a Mayor",
   },
   {
-    id: 'alphabetical-asc',
-    title: 'Nombre: A-Z'
+    id: "alphabetical-asc",
+    title: "Nombre: A-Z",
   },
   {
-    id: 'alphabetical-desc',
-    title: 'Nombre: Z-A'
-  }
-]
+    id: "alphabetical-desc",
+    title: "Nombre: Z-A",
+  },
+];
 
 export const COLLECTIONS: CollectionCard[] = [
   {
