@@ -27,7 +27,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/context/ProductFilterContext.tsx"
+    "src/context/ProductFilterContext.tsx",
+    "src/hooks/useProducts.ts"
   ],
   "exclude": ["node_modules"]
 }
