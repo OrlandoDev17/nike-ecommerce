@@ -19,6 +19,7 @@ export default function SelectionFilter() {
     setFilters((prevState) => ({
       ...prevState,
       [filterKey]: value,
+      currentPage: 1,
     }));
   };
 

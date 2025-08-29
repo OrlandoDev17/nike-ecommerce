@@ -77,4 +77,6 @@ export interface FilterState {
   collection: string;
   sortBy: string;
   search: string;
+  currentPage: number;
+  pageSize: number;
 }

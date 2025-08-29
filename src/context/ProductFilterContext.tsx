@@ -20,6 +20,8 @@ export function ProductFilterProvider({
     collection: "all-collections",
     sortBy: "most-recent",
     search: "",
+    currentPage: 1,
+    pageSize: 12,
   });
 
   return (

@@ -4,7 +4,7 @@ import { easeInOut, motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <section className="relative top-24 md:top-0 min-h-screen flex flex-col md:flex-row grow-0 md:justify-between items-center max-w-full md:max-w-9/12 mx-auto">
+    <section className="relative top-24 md:top-0 min-h-screen flex flex-col md:flex-row grow-0 md:justify-between items-center max-w-10/12 2xl:max-w-0/12 mx-auto">
       <motion.div
         initial={{ opacity: 0, x: -100, y: -100 }}
         whileInView={{ opacity: 1, x: 0, y: 0 }}
@@ -16,7 +16,7 @@ export default function Hero() {
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.5, ease: easeInOut, delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-6xl xl:text-7xl font-black font-titillium-web tracking-wider"
+          className="text-6xl 2xl:text-7xl font-black font-titillium-web tracking-wider"
         >
           Nike Dunk High
         </motion.h1>
@@ -25,7 +25,7 @@ export default function Hero() {
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.5, ease: easeInOut, delay: 0.25 }}
           viewport={{ once: true }}
-          className="text-5xl xl:text-6xl text-primary  font-light font-titillium-web tracking-wide"
+          className="text-5xl 2xl:text-6xl text-primary font-light font-titillium-web tracking-wide"
         >
           Black Orange
         </motion.h2>
@@ -34,7 +34,7 @@ export default function Hero() {
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.5, ease: easeInOut, delay: 0.3 }}
           viewport={{ once: true }}
-          className="max-w-md xl:max-w-xl mt-6 text-gray-600 text-pretty"
+          className="max-w-lg 2xl:max-w-xl mt-6 text-gray-600 text-balance"
         >
           Este modelo de Nike Dunk High es una declaración de estilo audaz y
           urbano. Su diseño combina una paleta vibrante de naranja intenso con
@@ -49,7 +49,7 @@ export default function Hero() {
           viewport={{ once: true }}
           className="flex items-center gap-12 mt-8"
         >
-          <button className="px-7 py-4 bg-primary text-white rounded-xl shadow-primary hover:-translate-y-1 hover:scale-110 transition-all">
+          <button className="px-7 py-4 bg-primary/80 text-white rounded-xl shadow-primary hover:-translate-y-1 hover:bg-primary hover:scale-110 transition-all">
             Agregar al carrito
           </button>
           <span className="text-4xl font-titillium-web font-bold tracking-wider">
