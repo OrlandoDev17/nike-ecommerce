@@ -18,32 +18,15 @@ export function useProducts(filters?: ProductFilters) {
   const [error, setError] = useState<string | null>(null);
   const [totalProducts, setTotalProducts] = useState<number>(0);
 
-  // Función para aplicar filtros a una consulta
-  const applyFilters = (query: any, filters?: ProductFilters) => {
-    if (filters?.type && filters.type !== "all-types") {
-      query = query.eq("type", filters.type);
-    }
-    if (filters?.category && filters.category !== "all-categories") {
-      query = query.eq("category_slug", filters.category);
-    }
-    if (filters?.collection && filters.collection !== "all-collections") {
-      query = query.eq("collection_slug", filters.collection);
-    }
-    if (filters?.search && filters.search.trim() !== "") {
-      query = query.ilike("name", `%${filters.search.trim()}%`);
-    }
-    return query;
-  };
-
   useEffect(() => {
     const sortMap: Record<
       string,
       { field: keyof Product; ascending: boolean }
     > = {
-      "most-recent": { field: "created_at", ascending: false },
-      "most-popular": { field: "views", ascending: false },
-      "price-asc": { field: "price", ascending: true },
-      "price-desc": { field: "price", ascending: false },
+      "most-recent": { field: "created_at", ascending: true },
+      "most-popular": { field: "views", ascending: true },
+      "price-asc": { field: "price", ascending: false },
+      "price-desc": { field: "price", ascending: true },
       "alphabetical-asc": { field: "name", ascending: true },
       "alphabetical-desc": { field: "name", ascending: false },
     };
@@ -55,14 +38,28 @@ export function useProducts(filters?: ProductFilters) {
       let query = supabase.from("products").select("*");
 
       // Filtros
-      query = applyFilters(query, filters);
+      if (filters?.type && filters.type !== "all-types") {
+        query = query.eq("type", filters.type);
+      }
+      if (filters?.category && filters.category !== "all-categories") {
+        query = query.eq("category_slug", filters.category);
+      }
+      if (filters?.collection && filters.collection !== "all-collections") {
+        query = query.eq("collection_slug", filters.collection);
+      }
+      if (filters?.search && filters.search.trim() !== "") {
+        query = query.ilike("name", `%${filters.search.trim()}%`);
+      }
 
       // Conteo total
       const countQuery = supabase
         .from("products")
-        .select("*", { count: "exact", head: true });
-      const filteredCountQuery = applyFilters(countQuery, filters);
-      const { count, error: countError } = await filteredCountQuery;
+        .select("*", { count: "exact", head: true })
+        .eq("type", filters?.type || "")
+        .eq("category_slug", filters?.category || "")
+        .eq("collection_slug", filters?.collection || "");
+
+      const { count, error: countError } = await countQuery;
       if (!countError && typeof count === "number") {
         setTotalProducts(count);
       }
@@ -78,7 +75,7 @@ export function useProducts(filters?: ProductFilters) {
       const currentPage = filters?.currentPage || 1;
       const from = (currentPage - 1) * pageSize;
       const to = from + pageSize - 1;
-      query = applyFilters(query.range(from, to));
+      query = query.range(from, to);
 
       // Fetch final
       const { data, error } = await query;
