@@ -32,6 +32,8 @@ export interface Product {
   category_slug?: string;
   offer?: boolean;
   discount?: number;
+  views?: number;
+  created_at?: string;
 }
 
 export interface DiscoverItem {

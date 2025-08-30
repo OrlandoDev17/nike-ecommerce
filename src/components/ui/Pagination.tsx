@@ -1,11 +1,14 @@
+import { Dispatch, SetStateAction } from "react";
+import { FilterState } from "@/types";
+
 export default function Pagination({
   totalPages,
   setFilters,
   filters,
 }: {
   totalPages: number;
-  setFilters: (filters: any) => void;
-  filters: any;
+  setFilters: Dispatch<SetStateAction<FilterState>>;
+  filters: FilterState;
 }) {
   return (
     <div className="flex justify-center gap-2 flex-wrap">
@@ -13,7 +16,7 @@ export default function Pagination({
         <button
           key={i}
           onClick={() =>
-            setFilters((prev: any) => ({ ...prev, currentPage: i + 1 }))
+            setFilters((prev: FilterState) => ({ ...prev, currentPage: i + 1 }))
           }
           className={`px-4 py-2 rounded-lg border ${
             filters.currentPage === i + 1
