@@ -2,7 +2,7 @@ import { Product } from "@/types";
 import Link from "next/link";
 import CategoryBadge from "./CategoryBadge";
 
-export default function FeaturedCard({
+export default function ProductCard({
   id,
   name,
   description,
@@ -46,7 +46,7 @@ export default function FeaturedCard({
         </div>
       </div>
       <footer className="flex flex-grow basis-0 items-end mt-2">
-        <button className="border-2 w-full border-primary px-4 py-2 rounded-md hover:-translate-y-1 hover:bg-primary hover:text-white transition-all cursor-pointer">
+        <button className="border-2 w-full border-primary px-4 py-2 rounded-md text-lg hover:-translate-y-1 hover:bg-primary hover:text-white transition-all cursor-pointer">
           Añadir al carrito
         </button>
       </footer>

@@ -44,9 +44,12 @@ export interface DiscoverItem {
   description?: string;
   content?: React.ReactNode;
   titleStyles?: string;
+  subtitle?: string;
+  subtitleStyles?: string;
   paragraphStyles?: string;
   Icon?: ComponentType;
   children?: ReactNode;
+  iconStyles?: string;
 }
 
 export interface AirMaxStory {

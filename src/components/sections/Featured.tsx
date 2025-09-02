@@ -28,7 +28,7 @@ export default function Featured() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-12 mb-4 md:max-w-full 2xl:max-w-10/12 mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 w-full"
       >
         {FEATURED_PRODUCTS.map((product) => (
           <motion.div key={product.id} variants={item}>

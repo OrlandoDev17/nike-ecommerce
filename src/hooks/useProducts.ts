@@ -52,12 +52,23 @@ export function useProducts(filters?: ProductFilters) {
       }
 
       // Conteo total
-      const countQuery = supabase
+      let countQuery = supabase
         .from("products")
-        .select("*", { count: "exact", head: true })
-        .eq("type", filters?.type || "")
-        .eq("category_slug", filters?.category || "")
-        .eq("collection_slug", filters?.collection || "");
+        .select("*", { count: "exact", head: true });
+
+      // Aplicar los mismos filtros que la consulta principal
+      if (filters?.type && filters.type !== "all-types") {
+        countQuery = countQuery.eq("type", filters.type);
+      }
+      if (filters?.category && filters.category !== "all-categories") {
+        countQuery = countQuery.eq("category_slug", filters.category);
+      }
+      if (filters?.collection && filters.collection !== "all-collections") {
+        countQuery = countQuery.eq("collection_slug", filters.collection);
+      }
+      if (filters?.search && filters.search.trim() !== "") {
+        countQuery = countQuery.ilike("name", `%${filters.search.trim()}%`);
+      }
 
       const { count, error: countError } = await countQuery;
       if (!countError && typeof count === "number") {

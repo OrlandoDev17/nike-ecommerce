@@ -9,7 +9,6 @@ import { useRef, useEffect } from "react";
 
 export default function ProductsWrapper() {
   const productSetionRef = useRef<HTMLDivElement>(null);
-  const { totalProducts } = useProducts();
   const context = useProductFilters();
 
   if (!context) {
@@ -19,6 +18,7 @@ export default function ProductsWrapper() {
   }
 
   const { filters, setFilters } = context;
+  const { products, loading, error, totalProducts } = useProducts(filters);
 
   useEffect(() => {
     if (productSetionRef.current) {
@@ -37,8 +37,8 @@ export default function ProductsWrapper() {
       className="flex flex-col gap-4 w-full max-w-10/12 mx-auto mb-12"
     >
       <FiltersWrapper />
-      <ProductList />
-      {totalPages > 1 && (
+      <ProductList products={products} loading={loading} error={error} />
+      {totalPages > 1 && loading === false && (
         <Pagination
           totalPages={totalPages}
           setFilters={setFilters}

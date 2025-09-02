@@ -1,21 +1,16 @@
 "use client";
 
-import { useProducts } from "@/hooks/useProducts";
-import { useProductFilters } from "@/context/ProductFilterContext";
 import ProductCard from "@/components/ui/ProductCard";
 import Loader from "@/components/ui/Loader";
+import { Product } from "@/types";
 
-export default function ProductList() {
-  const context = useProductFilters();
+interface ProductListProps {
+  products: Product[];
+  loading: boolean;
+  error: string | null;
+}
 
-  if (!context) {
-    throw new Error(
-      "useProductFilters must be used within a ProductFilterProvider"
-    );
-  }
-
-  const { filters } = context;
-  const { products, loading, error } = useProducts(filters);
+export default function ProductList({ products, loading, error }: ProductListProps) {
 
   return (
     <>
