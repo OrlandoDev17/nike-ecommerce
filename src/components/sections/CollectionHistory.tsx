@@ -56,7 +56,7 @@ export default function CollectionHistory() {
           día a día.
         </p>
         <article className="flex flex-col gap-3 bg-secondary px-12 py-8 rounded-xl text-white">
-          <h4 className="text-3xl font-black">"Just Do It"</h4>
+          <h4 className="text-3xl font-black">&quot;Just Do It&quot;</h4>
           <p className="text-lg">
             Más que un eslogan, es una invitación a superar límites y alcanzar
             la grandeza en cada paso.
