@@ -18,7 +18,7 @@ export default function Featured() {
 
   const item = {
     hidden: { opacity: 0, y: 50, scale: 0.8 },
-    visible: { opacity: 1, y: 0, scale: 1 },
+    visible: { opacity: 1, y: 0, scalwe: 1 },
   };
 
   return (

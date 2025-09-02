@@ -43,11 +43,7 @@ export default function Header() {
         onMouseLeave={() => handleHover(null)}
       >
         <picture className="flex flex-grow basis-0 ">
-          <img
-            className="w-16 lg:w-24"
-            src="/images/logo.svg"
-            alt="Logo de Nike"
-          />
+          <img className="w-16 lg:w-24" src="/logo.svg" alt="Logo de Nike" />
         </picture>
         <nav className="hidden lg:block">
           <ul className="flex items-center">

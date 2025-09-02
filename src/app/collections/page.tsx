@@ -1,3 +1,5 @@
+import CollectionHistory from "@/components/sections/CollectionHistory";
+import CollectionsWrapper from "@/components/sections/CollectionsWrapper";
 import Link from "next/link";
 
 export default function CollectionsPage() {
@@ -19,6 +21,8 @@ export default function CollectionsPage() {
           Explorar Colecciones
         </Link>
       </div>
+      <CollectionsWrapper />
+      <CollectionHistory />
     </div>
   );
 }

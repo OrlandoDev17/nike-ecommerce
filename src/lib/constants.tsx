@@ -361,7 +361,7 @@ export const COLLECTIONS: CollectionCard[] = [
   {
     id: "air-jordan",
     name: "Air Jordan",
-    image: "/images/air-jordan.webp",
+    image: "/images/collections/air-jordan.webp",
     description:
       "La colección más icónica del baloncesto, fusionando el rendimiento y estilo urbano desde 1985.",
     url: "/catalogue?collection=air-jordan",
@@ -370,7 +370,7 @@ export const COLLECTIONS: CollectionCard[] = [
   {
     id: "air-max",
     name: "Air Max",
-    image: "/images/air-max.webp",
+    image: "/images/collections/air-max.webp",
     description:
       "Innovación visible en cada paso. La revolución del aire cambió para siempre el calzado deportivo.",
     url: "/catalogue?collection=air-max",
@@ -379,7 +379,7 @@ export const COLLECTIONS: CollectionCard[] = [
   {
     id: "dunk",
     name: "Nike Dunk",
-    image: "/images/dunk.webp",
+    image: "/images/collections/dunk.webp",
     description:
       "El clásico streetwear que conquistó las calles y el skate desde los años 80.",
     url: "/catalogue?collection=dunk",
@@ -388,7 +388,7 @@ export const COLLECTIONS: CollectionCard[] = [
   {
     id: "sb",
     name: "Nike SB",
-    image: "/images/sb.webp",
+    image: "/images/collections/sb.webp",
     description:
       "Diseñadas para el skateboarding, combinan funcionalidad, estilo y cultura urbana.",
     url: "/catalogue?collection=sb",
@@ -397,7 +397,7 @@ export const COLLECTIONS: CollectionCard[] = [
   {
     id: "pegasus",
     name: "Nike Pegasus",
-    image: "/images/pegasus.webp",
+    image: "/images/collections/pegasus.webp",
     description:
       "Una línea legendaria para corredores, con amortiguación reactiva y diseño aerodinámico.",
     url: "/catalogue?collection=pegasus",
@@ -406,25 +406,16 @@ export const COLLECTIONS: CollectionCard[] = [
   {
     id: "react",
     name: "Nike React",
-    image: "/images/react.webp",
+    image: "/images/collections/react.webp",
     description:
       "Tecnología de espuma ligera que ofrece una pisada suave y retorno de energía.",
     url: "/catalogue?collection=react",
     featured: false,
   },
   {
-    id: "running",
-    name: "Nike Running",
-    image: "/images/running.webp",
-    description:
-      "Tecnología de vanguardia para corredores que buscan superar sus límites.",
-    url: "/catalogue?collection=running",
-    featured: false,
-  },
-  {
     id: "air-force-1",
     name: "Air Force 1",
-    image: "/images/air-force-1.webp",
+    image: "/images/collections/air-force-1.webp",
     description:
       "El ícono intemporal que nunca pasa de moda desde su debut en 1982.",
     url: "/catalogue?collection=air-force-1",

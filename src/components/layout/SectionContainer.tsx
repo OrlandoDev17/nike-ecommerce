@@ -8,7 +8,7 @@ interface SectionContainerProps {
   title: string;
   className?: string;
   span?: string;
-  type?: "home" | "catalogue";
+  type?: "home" | "catalogue" | "history";
   screenSize?: string;
   color?: string;
   description?: string;
