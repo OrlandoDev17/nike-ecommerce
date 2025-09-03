@@ -1,9 +1,7 @@
 import { Product } from "@/types";
-import Link from "next/link";
 import CategoryBadge from "./CategoryBadge";
 
 export default function ProductCard({
-  id,
   name,
   description,
   price,

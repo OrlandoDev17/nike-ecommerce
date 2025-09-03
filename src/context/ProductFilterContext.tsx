@@ -39,7 +39,7 @@ export function ProductFilterProvider({
       currentPage: parseInt(params.get("currentPage") || "1"),
       pageSize: parseInt(params.get("pageSize") || "12"),
     }));
-  }, []);
+  }, [router]);
 
   // Actualizar la URL cuando cambian los filtros
   useEffect(() => {
