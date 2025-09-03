@@ -85,5 +85,4 @@ export interface FilterState {
   search: string;
   currentPage: number;
   pageSize: number;
-  isFeatured: boolean;
 }
