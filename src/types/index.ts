@@ -34,6 +34,7 @@ export interface Product {
   discount?: number;
   views?: number;
   created_at?: string;
+  isFeatured?: boolean;
 }
 
 export interface DiscoverItem {
@@ -84,4 +85,5 @@ export interface FilterState {
   search: string;
   currentPage: number;
   pageSize: number;
+  isFeatured: boolean;
 }
