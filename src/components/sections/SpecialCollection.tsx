@@ -60,13 +60,13 @@ export default function SpecialCollection() {
           >
             <Link
               className="px-6 py-2.5 rounded-full bg-primary text-white hover:-translate-y-1 hover:scale-110 transition-all"
-              href="/catalogue"
+              href="/catalogue?collection=air-max"
             >
               Explorar Colección
             </Link>
             <Link
               className="px-6 py-2.5 rounded-full border-2 border-secondary/70 hover:-translate-y-1 hover:scale-110 transition-all"
-              href="#discover"
+              href="/history"
             >
               Ver Historia
             </Link>

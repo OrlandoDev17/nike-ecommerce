@@ -81,7 +81,7 @@ export const DISCOVER_NIKE: DiscoverItem[] = [
         </p>
         <Link
           className="mt-4 bg-primary text-white font-semibold px-5 py-3 rounded-lg shadow-xl shadow-primary/30 w-fit hover:-translate-y-1 hover:scale-110 transition-all"
-          href="/catalogue"
+          href="/catalogue?collection=air-jordan"
         >
           Ver Colección
         </Link>
