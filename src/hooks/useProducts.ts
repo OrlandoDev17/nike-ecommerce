@@ -1,16 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { Product } from "@/types";
-
-export type ProductFilters = {
-  type?: string;
-  category?: string;
-  collection?: string;
-  sortBy?: string;
-  search?: string;
-  currentPage?: number;
-  pageSize?: number;
-};
+import { ProductFilters } from "./useProductFilters";
 
 export function useProducts(filters?: ProductFilters) {
   const [products, setProducts] = useState<Product[]>([]);
