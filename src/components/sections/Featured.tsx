@@ -2,10 +2,14 @@
 
 import ProductCard from "@/components/ui/ProductCard";
 import SectionContainer from "../layout/SectionContainer";
-import { FEATURED_PRODUCTS } from "@/lib/mocks";
 import { motion } from "motion/react";
+import { useProducts } from "@/hooks/useProducts";
 
 export default function Featured() {
+  const { products } = useProducts({
+    isFeatured: true,
+  });
+
   const container = {
     hidden: {},
     visible: {
@@ -18,7 +22,7 @@ export default function Featured() {
 
   const item = {
     hidden: { opacity: 0, y: 50, scale: 0.8 },
-    visible: { opacity: 1, y: 0, scalwe: 1 },
+    visible: { opacity: 1, y: 0, scale: 1 },
   };
 
   return (
@@ -30,7 +34,7 @@ export default function Featured() {
         viewport={{ once: true }}
         className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 w-full"
       >
-        {FEATURED_PRODUCTS.map((product) => (
+        {products.map((product) => (
           <motion.div key={product.id} variants={item}>
             <ProductCard {...product} />
           </motion.div>

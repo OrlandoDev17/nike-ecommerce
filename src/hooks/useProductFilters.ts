@@ -8,6 +8,7 @@ export type ProductFilters = {
   search?: string;
   currentPage?: number;
   pageSize?: number;
+  isFeatured?: boolean;
 };
 
 export function useProductFilters() {

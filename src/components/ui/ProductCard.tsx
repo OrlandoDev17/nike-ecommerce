@@ -37,12 +37,6 @@ export default function ProductCard({
               ${price}
             </span>
           </div>
-          <Link
-            className="text-sm border-1 border-gray-300 px-4 py-2 rounded-md hover:-translate-y-1 hover:bg-gray-200 transition-all"
-            href={`/products/${id}`}
-          >
-            Ver producto
-          </Link>
         </div>
       </div>
       <footer className="flex flex-grow basis-0 items-end mt-2">

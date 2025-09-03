@@ -28,6 +28,9 @@ export function useProducts(filters?: ProductFilters) {
       // Base query
       let query = supabase.from("products").select("*");
 
+      // Traer solo productos destacados
+      query = query.eq("is_featured", true);
+
       // Filtros
       if (filters?.type && filters.type !== "all-types") {
         query = query.eq("type", filters.type);
