@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Titillium_Web, Inter } from "next/font/google";
 import "@/styles/globals.css";
+import { CartProvider } from "@/context/CartContext";
 
 // Components
 import Header from "@/components/layout/Header";
@@ -37,11 +38,13 @@ export default function RootLayout({
       <body
         className={`${titilliumWeb.variable} ${inter.variable} antialiased`}
       >
-        <Header />
-        <main className="flex flex-col flex-grow basis-0 min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <CartProvider>
+          <Header />
+          <main className="flex flex-col flex-grow basis-0 min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

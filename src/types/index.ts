@@ -35,6 +35,7 @@ export interface Product {
   views?: number;
   created_at?: string;
   isFeatured?: boolean;
+  addToCart?: (item: Product) => void;
 }
 
 export interface DiscoverItem {

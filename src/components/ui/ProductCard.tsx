@@ -1,7 +1,8 @@
-import { Product } from "@/types";
+import { CartItem } from "@/context/CartContext";
 import CategoryBadge from "./CategoryBadge";
 
 export default function ProductCard({
+  id,
   name,
   description,
   price,
@@ -9,7 +10,21 @@ export default function ProductCard({
   collection_slug,
   category_slug,
   image,
-}: Product) {
+  quantity,
+  addToCart,
+}: CartItem & { addToCart: (item: CartItem) => void }) {
+  const product = {
+    id,
+    name,
+    description,
+    price,
+    type,
+    collection_slug,
+    category_slug,
+    image,
+    quantity,
+  };
+
   return (
     <article className="flex flex-col gap-4 rounded-xl shadow-xl p-4 group hover:scale-102 transition-all z-10">
       <header className="bg-gray-300/70 px-4 rounded-xl h-[250px] relative">
@@ -38,7 +53,10 @@ export default function ProductCard({
         </div>
       </div>
       <footer className="flex flex-grow basis-0 items-end mt-2">
-        <button className="border-2 w-full border-primary px-4 py-2 rounded-md text-lg hover:-translate-y-1 hover:bg-primary hover:text-white transition-all cursor-pointer">
+        <button
+          className="border-2 w-full border-primary px-4 py-2 rounded-md text-lg hover:-translate-y-1 hover:bg-primary hover:text-white transition-all cursor-pointer"
+          onClick={() => addToCart(product)}
+        >
           Añadir al carrito
         </button>
       </footer>
