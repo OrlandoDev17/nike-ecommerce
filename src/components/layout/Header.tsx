@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 import { NAVBAR_ITEMS } from "@/lib/constants";
 import NavbarItem from "./NavbarItem";
 import NavMenu from "./NavMenu";
-import { CartIcon, ProfileIcon } from "../ui/Icons";
+import { ProfileIcon } from "../ui/Icons";
 import CartButton from "../ui/cart/CartButton";
 
 export default function Header() {

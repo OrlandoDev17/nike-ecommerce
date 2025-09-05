@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 import { CartItem } from "@/context/CartContext";
-import { Product } from "@/types";
 
 export function useFeaturedProducts(limit: number = 6) {
   const [featuredProducts, setFeaturedProducts] = useState<CartItem[]>([]);
