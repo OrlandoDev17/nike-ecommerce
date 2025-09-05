@@ -30,7 +30,7 @@ export default function ProductList({
           <ProductCard
             key={product.id}
             {...product}
-            addToCart={() => addToCart(product)}
+            addToCart={() => addToCart({ ...product, quantity: 1 })}
             removeFromCart={() => product.id && removeFromCart(product.id)}
           />
         ))}

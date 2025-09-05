@@ -41,7 +41,7 @@ export default function Featured() {
           <motion.div key={product.id} variants={item}>
             <ProductCard
               {...product}
-              addToCart={() => addToCart(product)}
+              addToCart={() => addToCart({ ...product, quantity: 1 })}
               removeFromCart={() => product.id && removeFromCart(product.id)}
             />
           </motion.div>
