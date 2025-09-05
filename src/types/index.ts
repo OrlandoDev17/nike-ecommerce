@@ -26,8 +26,7 @@ export interface Product {
   type?: string;
   featured?: boolean;
   image?: string;
-  sizes?: string[];
-  colors?: string[];
+  stock?: number;
   collection_slug?: string;
   category_slug?: string;
   offer?: boolean;

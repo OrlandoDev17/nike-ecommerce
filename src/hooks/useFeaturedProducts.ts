@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
+import { CartItem } from "@/context/CartContext";
 import { Product } from "@/types";
 
 export function useFeaturedProducts(limit: number = 6) {
-  const [featuredProducts, setFeaturedProducts] = useState<Product[]>([]);
+  const [featuredProducts, setFeaturedProducts] = useState<CartItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -21,7 +22,7 @@ export function useFeaturedProducts(limit: number = 6) {
         setError(error.message);
         setFeaturedProducts([]);
       } else {
-        setFeaturedProducts(data as Product[]);
+        setFeaturedProducts(data as CartItem[]);
         setError(null);
       }
 

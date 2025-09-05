@@ -4,6 +4,7 @@
   --font-inter: var(--font-inter);
   --font-titillium-web: var(--font-titillium-web);
   --color-primary: #fd854b;
+  --color-primary-dark: #de5714;
   --color-secondary: #222;
 }
 
@@ -29,7 +30,6 @@ body.open main {
   filter: blur(4px);
   pointer-events: none;
   z-index: 1;
-  transition: all 0.1s ease-in-out;
 }
 
 body.open main::before {
@@ -39,7 +39,6 @@ body.open main::before {
   background: rgba(0, 0, 0, 0.1);
   z-index: 10;
   pointer-events: none;
-  transition: all 0.1s ease-in-out;
 }
 
 .nav {

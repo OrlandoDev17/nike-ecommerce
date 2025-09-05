@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { CartIcon } from "../Icons";
 import { useCart } from "@/context/CartContext";
-import { AnimatePresence } from "motion/react";
 import Cart from "./Cart";
 
 export default function CartButton() {
@@ -26,7 +25,7 @@ export default function CartButton() {
         </span>
         <CartIcon className="size-8 cursor-pointer hover:text-primary transition" />
       </button>
-      <AnimatePresence>{isOpen && <Cart />}</AnimatePresence>
+      <Cart closeCart={handleToggleCart} isOpen={isOpen} />
     </>
   );
 }

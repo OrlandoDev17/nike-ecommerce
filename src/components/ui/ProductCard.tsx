@@ -1,5 +1,8 @@
-import { CartItem } from "@/context/CartContext";
+"use client";
+
+import { CartItem, useCart } from "@/context/CartContext";
 import CategoryBadge from "./CategoryBadge";
+import { useEffect, useState } from "react";
 
 export default function ProductCard({
   id,
@@ -12,7 +15,22 @@ export default function ProductCard({
   image,
   quantity,
   addToCart,
-}: CartItem & { addToCart: (item: CartItem) => void }) {
+  removeFromCart,
+}: CartItem & {
+  addToCart: (item: CartItem) => void;
+  removeFromCart: (productId: string) => void;
+}) {
+  const { cart } = useCart();
+  const [isInCart, setIsInCart] = useState(false);
+
+  useEffect(() => {
+    // Check if the product is in the cart when the component mounts or when cart changes
+    if (id) {
+      const productInCart = cart.some((item) => item.id === id);
+      setIsInCart(productInCart);
+    }
+  }, [cart, id]);
+
   const product = {
     id,
     name,
@@ -23,6 +41,16 @@ export default function ProductCard({
     category_slug,
     image,
     quantity,
+  };
+
+  const handleIsInCart = () => {
+    if (isInCart && id) {
+      removeFromCart(id);
+      setIsInCart(false);
+    } else {
+      addToCart(product);
+      setIsInCart(true);
+    }
   };
 
   return (
@@ -55,9 +83,9 @@ export default function ProductCard({
       <footer className="flex flex-grow basis-0 items-end mt-2">
         <button
           className="border-2 w-full border-primary px-4 py-2 rounded-md text-lg hover:-translate-y-1 hover:bg-primary hover:text-white transition-all cursor-pointer"
-          onClick={() => addToCart(product)}
+          onClick={() => handleIsInCart()}
         >
-          Añadir al carrito
+          {isInCart ? "Quitar del carrito" : "Añadir al carrito"}
         </button>
       </footer>
     </article>

@@ -16,7 +16,7 @@ export default function ProductList({
   loading,
   error,
 }: ProductListProps) {
-  const { addToCart } = useCart();
+  const { addToCart, removeFromCart } = useCart();
 
   return (
     <>
@@ -31,6 +31,7 @@ export default function ProductList({
             key={product.id}
             {...product}
             addToCart={() => addToCart(product)}
+            removeFromCart={() => product.id && removeFromCart(product.id)}
           />
         ))}
       </div>

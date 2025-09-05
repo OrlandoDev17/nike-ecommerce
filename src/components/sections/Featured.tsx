@@ -5,9 +5,11 @@ import SectionContainer from "../layout/SectionContainer";
 import { motion } from "motion/react";
 import Loader from "@/components/ui/Loader";
 import { useFeaturedProducts } from "@/hooks/useFeaturedProducts";
+import { useCart } from "@/context/CartContext";
 
 export default function Featured() {
   const { featuredProducts, loading, error } = useFeaturedProducts();
+  const { addToCart } = useCart();
 
   const container = {
     hidden: {},
@@ -37,7 +39,7 @@ export default function Featured() {
         {error && <p>Error: {error}</p>}
         {featuredProducts.map((product) => (
           <motion.div key={product.id} variants={item}>
-            <ProductCard {...product} />
+            <ProductCard {...product} addToCart={() => addToCart(product)} />
           </motion.div>
         ))}
       </motion.div>
