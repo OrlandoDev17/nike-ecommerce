@@ -11,9 +11,7 @@ export default function CartButton() {
 
   const handleToggleCart = () => {
     setIsOpen(!isOpen);
-    isOpen
-      ? document.body.classList.remove("open")
-      : document.body.classList.add("open");
+    document.body.classList[isOpen ? "remove" : "add"]("open");
   };
 
   return (
