@@ -9,7 +9,7 @@ import { useCart } from "@/context/CartContext";
 
 export default function Featured() {
   const { featuredProducts, loading, error } = useFeaturedProducts();
-  const { addToCart } = useCart();
+  const { addToCart, removeFromCart } = useCart();
 
   const container = {
     hidden: {},
@@ -39,7 +39,11 @@ export default function Featured() {
         {error && <p>Error: {error}</p>}
         {featuredProducts.map((product) => (
           <motion.div key={product.id} variants={item}>
-            <ProductCard {...product} addToCart={() => addToCart(product)} />
+            <ProductCard
+              {...product}
+              addToCart={() => addToCart(product)}
+              removeFromCart={() => product.id && removeFromCart(product.id)}
+            />
           </motion.div>
         ))}
       </motion.div>
