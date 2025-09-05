@@ -37,7 +37,11 @@ export default function ProductsWrapper() {
       className="flex flex-col gap-4 w-full max-w-10/12 mx-auto mb-12"
     >
       <FiltersWrapper />
-      <ProductList products={products} loading={loading} error={error} />
+      <ProductList
+        products={products.map((product) => ({ ...product, quantity: 1 }))}
+        loading={loading}
+        error={error}
+      />
       {totalPages > 1 && loading === false && (
         <Pagination
           totalPages={totalPages}
